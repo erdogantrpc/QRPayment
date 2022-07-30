@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307BEAF52895A529006496DD /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BEAF42895A529006496DD /* CustomerViewModel.swift */; };
 		3E3E53E9B6298C9F6AE20BCC /* Pods_QRPayment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */; };
+		DC3A04D7289549820058B6E3 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A04D5289549820058B6E3 /* CustomerViewController.swift */; };
+		DC3A04D8289549820058B6E3 /* CustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3A04D6289549820058B6E3 /* CustomerViewController.xib */; };
 		DCEE209A2892F9D9008800D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE20992892F9D9008800D0 /* AppDelegate.swift */; };
 		DCEE209C2892F9D9008800D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */; };
 		DCEE209E2892F9D9008800D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE209D2892F9D9008800D0 /* ViewController.swift */; };
@@ -18,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		307BEAF42895A529006496DD /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRPayment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		941A4FA6CD12F9ABE3B793AF /* Pods-QRPayment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRPayment.release.xcconfig"; path = "Target Support Files/Pods-QRPayment/Pods-QRPayment.release.xcconfig"; sourceTree = "<group>"; };
 		A7640A9EBEF50A10F6511D1D /* Pods-QRPayment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRPayment.debug.xcconfig"; path = "Target Support Files/Pods-QRPayment/Pods-QRPayment.debug.xcconfig"; sourceTree = "<group>"; };
+		DC3A04D5289549820058B6E3 /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		DC3A04D6289549820058B6E3 /* CustomerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerViewController.xib; sourceTree = "<group>"; };
 		DCEE20962892F9D9008800D0 /* QRPayment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRPayment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEE20992892F9D9008800D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,13 +50,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		307B631F2895AF6D006D8764 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DCEE20992892F9D9008800D0 /* AppDelegate.swift */,
+				DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		307B63202895AFA9006D8764 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				DCEE209D2892F9D9008800D0 /* ViewController.swift */,
+				DCEE209F2892F9D9008800D0 /* Main.storyboard */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		307B63222895AFC5006D8764 /* CustomerPage */ = {
+			isa = PBXGroup;
+			children = (
+				DC3A04D5289549820058B6E3 /* CustomerViewController.swift */,
+				DC3A04D6289549820058B6E3 /* CustomerViewController.xib */,
+			);
+			path = CustomerPage;
+			sourceTree = "<group>";
+		};
+		307BEAF32895A517006496DD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				307BEAF42895A529006496DD /* CustomerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A144699F17AADBE73AB015AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A7640A9EBEF50A10F6511D1D /* Pods-QRPayment.debug.xcconfig */,
 				941A4FA6CD12F9ABE3B793AF /* Pods-QRPayment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -60,6 +100,15 @@
 				56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC3A04D2289548F10058B6E3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				307B63202895AFA9006D8764 /* HomePage */,
+				307B63222895AFC5006D8764 /* CustomerPage */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		DCEE208D2892F9D9008800D0 = {
@@ -83,10 +132,9 @@
 		DCEE20982892F9D9008800D0 /* QRPayment */ = {
 			isa = PBXGroup;
 			children = (
-				DCEE20992892F9D9008800D0 /* AppDelegate.swift */,
-				DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */,
-				DCEE209D2892F9D9008800D0 /* ViewController.swift */,
-				DCEE209F2892F9D9008800D0 /* Main.storyboard */,
+				307B631F2895AF6D006D8764 /* App */,
+				307BEAF32895A517006496DD /* ViewModels */,
+				DC3A04D2289548F10058B6E3 /* Scenes */,
 				DCEE20A22892F9E0008800D0 /* Assets.xcassets */,
 				DCEE20A42892F9E0008800D0 /* LaunchScreen.storyboard */,
 				DCEE20A72892F9E0008800D0 /* Info.plist */,
@@ -159,6 +207,7 @@
 				DCEE20AE2892FA6F008800D0 /* GoogleService-Info.plist in Resources */,
 				DCEE20A32892F9E0008800D0 /* Assets.xcassets in Resources */,
 				DCEE20A12892F9D9008800D0 /* Main.storyboard in Resources */,
+				DC3A04D8289549820058B6E3 /* CustomerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3A04D7289549820058B6E3 /* CustomerViewController.swift in Sources */,
+				307BEAF52895A529006496DD /* CustomerViewModel.swift in Sources */,
 				DCEE209E2892F9D9008800D0 /* ViewController.swift in Sources */,
 				DCEE209A2892F9D9008800D0 /* AppDelegate.swift in Sources */,
 				DCEE209C2892F9D9008800D0 /* SceneDelegate.swift in Sources */,
