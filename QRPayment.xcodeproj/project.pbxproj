@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3E53E9B6298C9F6AE20BCC /* Pods_QRPayment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */; };
 		DCEE209A2892F9D9008800D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE20992892F9D9008800D0 /* AppDelegate.swift */; };
 		DCEE209C2892F9D9008800D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */; };
 		DCEE209E2892F9D9008800D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE209D2892F9D9008800D0 /* ViewController.swift */; };
 		DCEE20A12892F9D9008800D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEE209F2892F9D9008800D0 /* Main.storyboard */; };
 		DCEE20A32892F9E0008800D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEE20A22892F9E0008800D0 /* Assets.xcassets */; };
 		DCEE20A62892F9E0008800D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEE20A42892F9E0008800D0 /* LaunchScreen.storyboard */; };
+		DCEE20AE2892FA6F008800D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCEE20AD2892FA6F008800D0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRPayment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		941A4FA6CD12F9ABE3B793AF /* Pods-QRPayment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRPayment.release.xcconfig"; path = "Target Support Files/Pods-QRPayment/Pods-QRPayment.release.xcconfig"; sourceTree = "<group>"; };
+		A7640A9EBEF50A10F6511D1D /* Pods-QRPayment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRPayment.debug.xcconfig"; path = "Target Support Files/Pods-QRPayment/Pods-QRPayment.debug.xcconfig"; sourceTree = "<group>"; };
 		DCEE20962892F9D9008800D0 /* QRPayment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRPayment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEE20992892F9D9008800D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCEE209B2892F9D9008800D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		DCEE20A22892F9E0008800D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCEE20A52892F9E0008800D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCEE20A72892F9E0008800D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCEE20AD2892FA6F008800D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3E53E9B6298C9F6AE20BCC /* Pods_QRPayment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A144699F17AADBE73AB015AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7640A9EBEF50A10F6511D1D /* Pods-QRPayment.debug.xcconfig */,
+				941A4FA6CD12F9ABE3B793AF /* Pods-QRPayment.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF5F9F7363BF04F78F46D276 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56889AC52BF0A88AEB5F7B44 /* Pods_QRPayment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCEE208D2892F9D9008800D0 = {
 			isa = PBXGroup;
 			children = (
 				DCEE20982892F9D9008800D0 /* QRPayment */,
 				DCEE20972892F9D9008800D0 /* Products */,
+				A144699F17AADBE73AB015AD /* Pods */,
+				CF5F9F7363BF04F78F46D276 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				DCEE20A22892F9E0008800D0 /* Assets.xcassets */,
 				DCEE20A42892F9E0008800D0 /* LaunchScreen.storyboard */,
 				DCEE20A72892F9E0008800D0 /* Info.plist */,
+				DCEE20AD2892FA6F008800D0 /* GoogleService-Info.plist */,
 			);
 			path = QRPayment;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCEE20AA2892F9E0008800D0 /* Build configuration list for PBXNativeTarget "QRPayment" */;
 			buildPhases = (
+				66B6AD4E7464A3F2E5A2ABAB /* [CP] Check Pods Manifest.lock */,
 				DCEE20922892F9D9008800D0 /* Sources */,
 				DCEE20932892F9D9008800D0 /* Frameworks */,
 				DCEE20942892F9D9008800D0 /* Resources */,
+				DF7C86D6494C2F5B1E292CA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCEE20A62892F9E0008800D0 /* LaunchScreen.storyboard in Resources */,
+				DCEE20AE2892FA6F008800D0 /* GoogleService-Info.plist in Resources */,
 				DCEE20A32892F9E0008800D0 /* Assets.xcassets in Resources */,
 				DCEE20A12892F9D9008800D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66B6AD4E7464A3F2E5A2ABAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QRPayment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF7C86D6494C2F5B1E292CA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QRPayment/Pods-QRPayment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QRPayment/Pods-QRPayment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QRPayment/Pods-QRPayment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCEE20922892F9D9008800D0 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		DCEE20AB2892F9E0008800D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7640A9EBEF50A10F6511D1D /* Pods-QRPayment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +384,7 @@
 		};
 		DCEE20AC2892F9E0008800D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 941A4FA6CD12F9ABE3B793AF /* Pods-QRPayment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
