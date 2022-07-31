@@ -26,7 +26,7 @@ class CustomerViewModel {
 
     // MARK: Private variable
     private let database = Firestore.firestore()
-    private let id = UUID().uuidString
+    private let id = "QRP-\(UUID().uuidString)"
 
     // MARK: Private func
     private func pushFirebase() {
