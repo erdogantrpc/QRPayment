@@ -9,5 +9,6 @@ target 'QRPayment' do
 pod 'FirebaseAnalytics'
 pod 'FirebaseFirestore'
 pod 'FirebaseCrashlytics'
+pod 'FirebaseMessaging'
 
 end

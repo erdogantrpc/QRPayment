@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class ViewController: UIViewController {
 
@@ -54,6 +55,9 @@ class ViewController: UIViewController {
     @IBAction func cashierButtonClicked(_ sender: Any) {
         let destinationVC = CashierViewController(nibName: String(describing: CashierViewController.self), bundle: nil)
         self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    @IBAction func sendCrashlyticsButtonClicked(_ sender: Any) {
+        Crashlytics.crashlytics().setCustomValue("CustomCrash", forKey: "CustomCrash tıklandı")
     }
 }
 

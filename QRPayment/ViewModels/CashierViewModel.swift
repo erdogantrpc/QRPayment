@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import FirebaseFirestore
 import AVFoundation
+import FirebaseAnalytics
 
 class CashierViewModel: NSObject {
 
@@ -17,6 +18,8 @@ class CashierViewModel: NSObject {
         static let qrCodeKey = "QRCode"
         static let statusKey = "status"
         static let checkQRKey = "QRP"
+        static let firebaseEventMessage = "QR kod okundu"
+        static let firebaseEventKey = "Okuma"
     }
 
     // MARK: Published variable
@@ -177,6 +180,8 @@ extension CashierViewModel: AVCaptureMetadataOutputObjectsDelegate {
             qrCode = stringValue
             if qrCode.contains(Constant.checkQRKey) {
                 openPicker = true
+                Analytics.logEvent(AnalyticsEventShare,
+                                   parameters: [Constant.firebaseEventKey :Constant.firebaseEventMessage])
             } else {
                 hasError = true
             }

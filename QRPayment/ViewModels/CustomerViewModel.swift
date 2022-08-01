@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import FirebaseFirestore
+import FirebaseAnalytics
 
 class CustomerViewModel {
 
@@ -18,6 +19,8 @@ class CustomerViewModel {
         static let qrCodeGenetareString = "QRCode/%@"
         static let qrGenerateError = "QR kod oluşturulurken bir hata oluştu"
         static let firebaseReadError = "Veri okunurken bir hata oluştu"
+        static let firebaseEventMessage = "QR Kod oluşturuldu"
+        static let firebaseEventKey = "Oluşturma"
     }
 
     // MARK: Published variable
@@ -55,6 +58,8 @@ class CustomerViewModel {
         }
         qrImage = UIImage(ciImage: output)
         pushFirebase()
+        Analytics.logEvent(AnalyticsEventShare,
+                           parameters: [Constant.firebaseEventKey :Constant.firebaseEventMessage])
     }
     
     /**

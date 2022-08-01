@@ -7,16 +7,50 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseMessaging
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
+        UNUserNotificationCenter.current().delegate = self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+            }
+                
+        })
+
+        Messaging.messaging().delegate = self
+        
+        Messaging.messaging().token { token, error in
+            if let error = error {
+                debugPrint("Error fetching FCM registration token: \(error)")
+            } else if let token = token {
+                debugPrint("FCM registration token: \(token)")
+            }
+        }
+
         return true
+    }
+    
+    // getting firebase registration token
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        debugPrint("Firebase registration token: \(String(describing: fcmToken))")
+    }
+
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      Messaging.messaging().apnsToken = deviceToken
     }
 
     // MARK: UISceneSession Lifecycle
