@@ -4,5 +4,5 @@ QRPayment is a payment simulation application built using Firebase. When you cli
 ## Installation
 
 ```sh
-pod install
+pod update
 ```
